@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Get Method</title>
+    <title>st78694 WorkBook</title>
 </head>
 <body>
     <h1>GET Method</h1>
@@ -31,5 +31,28 @@ Host: reqbin.com
   "ID": 78694,
   "Faculty": "Engineering Faculty"
 }
+
+    <h1>YouTube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+
+<h1>Geolocation</h1>
+    <button onclick="getLocation()">Get Location</button>
+    <p id="location"></p>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            var locationElement = document.getElementById("location");
+            locationElement.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+
 </body>
 </html>
